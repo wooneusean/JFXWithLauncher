@@ -4,9 +4,13 @@ Ever since JavaFX stopped shipping with the Java JDK, it is "hell" to properly c
 ## Prerequisites
 
 1. Any version of the [JavaFX JDK](https://gluonhq.com/products/javafx/), prefereably the LTS or the latest release.
+
 2. Any version of the [Java JDK](https://www.oracle.com/java/technologies/javase-downloads.html), prefereably the LTS or the latest release.
+
 3. IntelliJ IDEA or any IDE that allows you to change the version Java JDK version for JavaFX projects.
+
 4. Latest version of [SceneBuilder](https://gluonhq.com/products/scene-builder/#download), which is a GUI drag-and-drop application for JavaFX.
+
 5. Optional if you want to use JFoenix: [JFoenix 9.0.10](https://github.com/jfoenixadmin/JFoenix) or the latest version.
 
 I'm not sure how using different versions of the JavaFX JDK and Java JDK will affect things, So to be safe just use similar versions, i.e. JavaFX JDK 15 with Java JDK 15
@@ -18,18 +22,27 @@ I'm using IntelliJ IDEA for creating the JavaFX application.
 ### Project Setup
 
 1. Create a new JavaFX project. `New Project -> JavaFX -> Choose your preferred Java JDK version -> Give your project a name -> Finish`
+
 2. Inside your new project `src` folder, contains a `sample` package which has a fxml file, `sample.fxml`, with its controller, `Controller.java`
+
 3. You will see that all the JavaFX imports have errors. To fix this, go to `File -> Project Structure -> Libraries` or `CTRL + SHIFT + ALT + S` then navigate to `Libraries`.
+
 4. Press the `+` button and select `Java` from the dropdown menu.
+
 5. Navigate to the `lib` folder within your JavaFX JDK install location. i.e. `C:\Program Files\Java\javafx-sdk-15.0.1\lib`
+
 6. Click `OK` and Click `OK` again on the `Choose Modules` popup.
+
 7. Optional: Press the `+` button again, select `Java` again. This time, navigate to your JFoenix .jar file location. i.e. `C:\java-ext-lib\jfoenix-9.0.10.jar`
+
 8. Hit `Apply` then `Ok`
 
 ### Creating a Launcher class
 
 1. Create a new class by right-clicking the `sample` package then `New -> Java Class -> Give it a name. I named it "Launcher"`.
+
 2. Make sure the `Launcher.java` class follows the below code:
+
 ```java
 package sample;
 
@@ -44,13 +57,17 @@ public class Launcher {
 ### Configuring the Running configuration
 
 1. Go to `Run -> Edit Configurations`.
+
 2. Change the `Main class` to the `Launcher` class. i.e. `sample.Main`.
+
 3. Add the following to `VM options`:
+
 ```
 --module-path %PATH_TO_FX% --add-modules javafx.controls,javafx.fxml
 or
 --module-path "C:\Program Files\Java\javafx-sdk-15.0.1\lib" --add-modules javafx.controls,javafx.fxml
 ```
+
 `%PATH_TO_FX%` is the path to the `lib` folder within the JavaFX JDK you installed. i.e. `C:\Program Files\Java\javafx-sdk-15.0.1\lib`
 
 4. Click `Apply` and `Ok`
@@ -60,6 +77,7 @@ You should be able to run it now by pressing `Shift+F10` on your keyboard or cli
 The following steps are optional if you want to use JFoenix.
 
 5. Open `sample.fxml` in SceneBuilder.
+
 6. Click the cog icon next to the search bar on the toolbox and select `JAR/FXML Manager`
 
 ![Figure1](https://i.imgur.com/cI46P8S.png)
@@ -152,7 +170,9 @@ public class Controller {
 ### Build setup
 
 1. Go to `File ->  Project Structure` or `CTRL+SHIFT+ALT+S` and go to `Artifacts`.
+
 2. Press the `+` button and select `JAR -> From modules and dependencies...`
+
 3. A `Create JAR from Modules` window should pop up. Change the `Main Class` to the Launcher class
 
 ![Figure8](https://i.imgur.com/45TXfE4.png)
