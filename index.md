@@ -1,5 +1,4 @@
-# Creating a single-jar (FatJar) JavaFX application with JFoenix (WIP)
-
+# Creating a single-jar (FatJar) JavaFX application with JFoenix
 Ever since JavaFX stopped shipping with the Java JDK, it is "hell" to properly create a working single-jar application (also called FatJar) with JavaFX, even more with external UI libraries like [JFoenix](https://github.com/jfoenixadmin/JFoenix). I went through several days of hell so you don't have to. I will be going through, step-by-step what you need to do to end up with a single .jar file that runs on double click and doesn't open a command prompt, with JFoenix.
 
 ## Prerequisites
@@ -173,5 +172,7 @@ public class Controller {
 ![Figure11](https://i.imgur.com/eeEDO8p.png)
 
 ## References
+
 https://stackoverflow.com/questions/53533486/how-to-open-javafx-jar-file-with-jdk-11
+
 https://openjfx.io/openjfx-docs/#IDEA-IDE
