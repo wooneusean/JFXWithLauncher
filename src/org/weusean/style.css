@@ -1,0 +1,18 @@
+* {
+  -fx-primary: #2196f3;
+  -fx-primary-light: #6ec6ff;
+  -fx-primary-dark: #0069c0;
+  -fx-secondary: #37474f;
+  -fx-secondary-light: #62727b;
+  -fx-secondary-dark: #102027;
+  -fx-text-on-p: #fafafa;
+  -fx-text-on-s: #fafafa;
+}
+
+.button {
+    -fx-background-color: -fx-primary;
+}
+
+.text-field {
+    -jfx-focus-color: -fx-primary;
+}

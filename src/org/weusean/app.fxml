@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="1000.0" prefHeight="400.0"
+            prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.weusean.AppController">
+    <children>
+        <VBox alignment="CENTER" layoutX="450.0" layoutY="200.0" prefHeight="600.0" prefWidth="1000.0"
+              AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+              AnchorPane.topAnchor="0.0">
+            <children>
+                <JFXTextField fx:id="txtUsername" labelFloat="true" maxWidth="200.0" promptText="Username">
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </VBox.margin>
+                    <font>
+                        <Font name="Segoe UI" size="18.0"/>
+                    </font>
+                </JFXTextField>
+                <JFXTextField fx:id="txtPassword" labelFloat="true" maxWidth="200.0" promptText="Password">
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </VBox.margin>
+                    <font>
+                        <Font name="Segoe UI" size="18.0"/>
+                    </font>
+                </JFXTextField>
+                <JFXButton fx:id="btnLogin" onAction="#login" prefHeight="35.0" prefWidth="100.0" styleClass="btn"
+                           text="Login" textFill="WHITE">
+                    <VBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                    </VBox.margin>
+                    <font>
+                        <Font name="Segoe UI" size="18.0"/>
+                    </font>
+                </JFXButton>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
