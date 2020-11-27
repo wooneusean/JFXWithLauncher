@@ -1,37 +1,31 @@
-## Welcome to GitHub Pages
+# Creating a single-jar (FatJar) JavaFX application with JFoenix (WIP)
 
-You can use the [editor on GitHub](https://github.com/euseanwoon2016/JFXWithLauncher/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Ever since JavaFX stopped shipping with the Java JDK, it is "hell" to properly create a working single-jar application (also called FatJar) with JavaFX, even more with external UI libraries like [JFoenix](https://github.com/jfoenixadmin/JFoenix). I went through several days of hell so you don't have to. I will be going through, step-by-step what you need to do to end up with a single .jar file that runs on double click and doesn't open a command prompt, with JFoenix.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Prerequisites
 
-### Markdown
+1. Any version of the [JavaFX JDK](https://gluonhq.com/products/javafx/), prefereably the LTS or the latest release.
+2. Any version of the [Java JDK](https://www.oracle.com/java/technologies/javase-downloads.html), prefereably the LTS or the latest release.
+3. IntelliJ IDEA or any IDE that allows you to change the version Java JDK version for JavaFX projects.
+4. Optional if you want to use JFoenix: [JFoenix 9.0.10](https://github.com/jfoenixadmin/JFoenix) or the latest version.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+I'm not sure how using different versions of the JavaFX JDK and Java JDK will affect things, So to be safe just use similar versions, i.e. JavaFX JDK 15 with Java JDK 15
 
-```markdown
-Syntax highlighted code block
+## Creating the Project
 
-# Header 1
-## Header 2
-### Header 3
+I'm using IntelliJ IDEA for creating the JavaFX application.
 
-- Bulleted
-- List
+### Project Setup
 
-1. Numbered
-2. List
+1. Create a new JavaFX project. `New Project -> JavaFX -> Choose your preferred Java JDK version -> Give your project a name -> Finish`
+2. Inside your new project `src` folder, contains a `sample` package which has a fxml file, `sample.fxml`, with its controller, `Controller.java`
+3. You will see that all the JavaFX imports have errors. To fix this, go to `File -> Project Structure -> Libraries` or `CTRL + SHIFT + ALT + S` then navigate to `Libraries`.
+4. Press the `+` button and select `Java` from the dropdown menu.
+5. Navigate to the `lib` folder within your JavaFX JDK install location. i.e `C:\Program Files\Java\javafx-sdk-15.0.1\lib`
+6. Click `OK` and Click `OK` again on the `Choose Modules` popup.
 
-**Bold** and _Italic_ and `Code` text
+This next step is optional if you don't want to use JFoenix.
 
-[Link](url) and ![Image](src)
-```
+7. Press the `+` button again, select `Java` again. This time, navigate to your JFoenix .jar file location. i.e `C:\java-ext-lib\jfoenix-9.0.10.jar`
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/euseanwoon2016/JFXWithLauncher/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Building and Distributing
