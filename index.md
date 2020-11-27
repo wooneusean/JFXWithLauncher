@@ -7,7 +7,7 @@ Ever since JavaFX stopped shipping with the Java JDK, it is "hell" to properly c
 
 2. Any version of the [Java JDK](https://www.oracle.com/java/technologies/javase-downloads.html), prefereably the LTS or the latest release.
 
-3. IntelliJ IDEA or any IDE that allows you to change the version Java JDK version for JavaFX projects.
+3. IntelliJ IDEA or any IDE that allows you to change the Java JDK version for JavaFX projects.
 
 4. Latest version of [SceneBuilder](https://gluonhq.com/products/scene-builder/#download), which is a GUI drag-and-drop application for JavaFX.
 
@@ -184,6 +184,8 @@ You should see that a new artifact is created with all the dependencies included
 ![Figure9](https://i.imgur.com/vyqHxMV.png)
 
 Press the `+` button and select `Directory Content`. Navigate to the `bin` folder in where you install your JavaFX JDK. i.e. `C:\Program Files\Java\javafx-sdk-15.0.1\bin`. Hit `Apply` and `OK`.
+
+![DirectoryContent](https://i.imgur.com/scTXuwC.png)
 
 Now you can build your .jar file by going to `Build -> Build Artifacts...` and on the popup that appears, click the newly created JAR artifact setting to build it.
 
